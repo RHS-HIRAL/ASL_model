@@ -8,7 +8,7 @@ def preprocess_images(data_dir='data/raw', target_size=(128, 128), train_split=0
     print(f"[INFO] Starting preprocessing for train/val split from: {data_dir}")
     images = []
     labels = []
-    
+    #
     # Iterate through class folders
     for class_name in os.listdir(data_dir):
         class_path = os.path.join(data_dir, class_name)

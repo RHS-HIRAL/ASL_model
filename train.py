@@ -8,7 +8,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import matplotlib.pyplot as plt
 from tensorflow.keras.callbacks import CSVLogger
 
-# --- Config ---
+# --- Config --
 IMG_SIZE = (128, 128)
 BATCH_SIZE = 32
 EPOCHS = 25

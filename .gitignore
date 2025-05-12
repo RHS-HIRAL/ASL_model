@@ -2,6 +2,11 @@
 ffmpeg-7.1.1-essentials_build/
 data/processed/
 data/raw/
+MS_train/processed_data/
+MS_train/processed_data/landmarks_train.npy
+MS_train/processed_data/labels_train.npy
+MS_train/processed_data/backup/
+MS_train/raw_data/
 *.pyc
 *.pyo
 *.pyd
@@ -16,3 +21,12 @@ data/raw/
 *.bmp
 *.tiff
 *.ico
+*.json
+*.npy
+*.csv
+*.txt
+*.log
+*.pkl
+*.pickle
+*.pickle.gz
+*.pickle.bz2

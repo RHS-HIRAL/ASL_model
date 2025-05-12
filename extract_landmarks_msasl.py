@@ -387,6 +387,7 @@ def process_split(json_file, out_landmarks, out_labels):
                     for h in batch_hashes:
                         hash_file.write(h + '\n')
                     hash_file.flush()
+                    print(f"Checkpoint saved at {len(features)} samples.")
                     batch_features.clear()
                     batch_labels.clear()
                     batch_hashes.clear()

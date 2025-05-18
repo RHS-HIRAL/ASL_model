@@ -24,6 +24,8 @@ train_gen = train_datagen.flow_from_directory(
     subset='training',
     shuffle=True
 )
+# Validation generator
+# Note: The validation generator is created from the same directory with a different subset
 val_gen = train_datagen.flow_from_directory(
     PROCESSED_DIR,
     target_size=IMG_SIZE,
@@ -85,6 +87,7 @@ plt.plot(epochs_range, val_acc, label='Validation Accuracy')
 plt.legend(loc='lower right')
 plt.title('Training and Validation Accuracy')
 
+# Plotting Loss
 plt.subplot(1, 2, 2)
 plt.plot(epochs_range, loss, label='Training Loss')
 plt.plot(epochs_range, val_loss, label='Validation Loss')

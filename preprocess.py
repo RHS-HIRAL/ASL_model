@@ -9,7 +9,7 @@ def preprocess_images(data_dir='data/raw', target_size=(128, 128), train_split=0
     images = []
     labels = []
     
-    # Iterate through class folders
+    # Iterate through class folders in data_dir
     for class_name in os.listdir(data_dir):
         class_path = os.path.join(data_dir, class_name)
         if not os.path.isdir(class_path):
@@ -31,7 +31,7 @@ def preprocess_images(data_dir='data/raw', target_size=(128, 128), train_split=0
             images.append(img)
             labels.append(class_name)
     
-    # Convert to numpy arrays
+    # Convert to numpy arrays for processing
     X = np.array(images)
     y = np.array(labels)
     print(f"[INFO] Total images: {len(X)}, Total labels: {len(y)}")
@@ -46,7 +46,7 @@ def preprocess_images(data_dir='data/raw', target_size=(128, 128), train_split=0
     print(f"[INFO] Split: {X_train.shape[0]} train, {X_val.shape[0]} val")
     return X_train, X_val, y_train, y_val
 
-
+# Function to preprocess and save images with augmentation and grayscale conversion
 def preprocess_and_save_images(data_dir='data/raw', processed_dir='data/processed', target_size=(128, 128), augment=True, augment_count=2):
     """
     Preprocess images from data_dir and save them as JPGs in processed_dir/<class>_new/ folders.

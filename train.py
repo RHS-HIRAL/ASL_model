@@ -9,12 +9,14 @@ import matplotlib.pyplot as plt
 from tensorflow.keras.callbacks import CSVLogger
 
 # --- Config ---
+# Note: The config is set to use a processed directory for images
 IMG_SIZE = (128, 128)
 BATCH_SIZE = 32
 EPOCHS = 25
 PROCESSED_DIR = 'data/processed'
 
 # --- Data Generators ---
+# Note: The data generators are created from the processed directory
 train_datagen = ImageDataGenerator(validation_split=0.2, rescale=1./255)
 train_gen = train_datagen.flow_from_directory(
     PROCESSED_DIR,

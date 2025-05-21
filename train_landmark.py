@@ -11,7 +11,6 @@ EPOCHS = 25
 BATCH_SIZE = 32
 
 # --- Load Data ---
-# Assumes landmarks.npy (shape: [num_samples, num_features]) and labels.npy (shape: [num_samples,])
 landmarks = np.load('landmarks.npy')
 labels = np.load('labels.npy')
 
@@ -76,7 +75,6 @@ plt.plot(epochs_range, val_loss, label='Validation Loss')
 plt.legend(loc='upper right')
 plt.title('Training and Validation Loss')
 
-# Save the plots
 plt.xlabel('Epochs')
 plt.tight_layout()
 plt.savefig('landmark_training_curves.png')

@@ -82,6 +82,8 @@ loss = history.history['loss']
 val_loss = history.history['val_loss']
 epochs_range = range(EPOCHS)
 
+# Plotting Accuracy
+# Note: The training and validation accuracy are plotted
 plt.figure(figsize=(12, 5))
 plt.subplot(1, 2, 1)
 plt.plot(epochs_range, acc, label='Training Accuracy')
